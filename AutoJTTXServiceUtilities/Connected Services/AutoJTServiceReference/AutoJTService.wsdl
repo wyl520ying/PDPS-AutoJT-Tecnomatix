@@ -1,0 +1,1505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="AutoJTService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://www.autojt.com:8002/AutoJTService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://www.autojt.com:8002/AutoJTService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://www.autojt.com:8002/AutoJTService?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://www.autojt.com:8002/AutoJTService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/AutoJTWcfService" />
+      <xsd:import schemaLocation="http://www.autojt.com:8002/AutoJTService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://www.autojt.com:8002/AutoJTService?xsd=xsd5" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAutoJTService_GetCPPRuntimeUrl_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCPPRuntimeUrl" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetCPPRuntimeUrl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCPPRuntimeUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUnionIDNickName4ClientInfos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnionIDNickName4ClientInfos" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUnionIDNickName4ClientInfos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnionIDNickName4ClientInfosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_UserAuthentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_UserAuthentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_UpgradeNickname_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeNickname" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_UpgradeNickname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeNicknameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_UpdateUserPaymentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPaymentData" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_UpdateUserPaymentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserPaymentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_QueryAllComboMealInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllComboMealInfo" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_QueryAllComboMealInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllComboMealInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CheckUserOwnerVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUserOwnerVersion" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CheckUserOwnerVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUserOwnerVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUserAllEnableVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAllEnableVersion" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUserAllEnableVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAllEnableVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetCurrentClientLoginStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentClientLoginStatus" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetCurrentClientLoginStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentClientLoginStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetCurrentMachineLoginCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentMachineLoginCode" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetCurrentMachineLoginCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentMachineLoginCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetLoginPopular_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoginPopular" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetLoginPopular_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoginPopularResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_QueryVersionDesc4ModuleID_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryVersionDesc4ModuleID" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_QueryVersionDesc4ModuleID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryVersionDesc4ModuleIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_ValidateAuth_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAuth" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_ValidateAuth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_ExitLoginMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExitLoginMethod" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_ExitLoginMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExitLoginMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetTableFromDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTableFromDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetTableFromDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTableFromDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUserFromDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFromDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUserFromDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFromDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUserFromDatabase2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFromDatabase2" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUserFromDatabase2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFromDatabase2Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUserFromDatabase_wechat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFromDatabase_wechat" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUserFromDatabase_wechat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFromDatabase_wechatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUserFromDatabase_wechat2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFromDatabase_wechat2" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetUserFromDatabase_wechat2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserFromDatabase_wechat2Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_DeleteItemData_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItemData" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_DeleteItemData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItemDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_DeleteItemData2_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItemData2" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_DeleteItemData2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteItemData2Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_InsertByDataTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertByDataTable" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_InsertByDataTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertByDataTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_ImportTableToDB1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportTableToDB1" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_ImportTableToDB1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportTableToDB1Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_ImportTableToDB2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportTableToDB2" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_ImportTableToDB2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportTableToDB2Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetSqlDataReader1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSqlDataReader1" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetSqlDataReader1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSqlDataReader1Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetRowsCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsCount" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetRowsCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_QueryUsernameFidle_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryUsernameFidle" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_QueryUsernameFidle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryUsernameFidleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAccount" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_UpdateWchatNiceName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWchatNiceName" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_UpdateWchatNiceName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWchatNiceNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_UpdateWchatNiceName_2Net6_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWchatNiceName_2Net6" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_UpdateWchatNiceName_2Net6_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWchatNiceName_2Net6Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_VerificationCodeValid_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificationCodeValid" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_VerificationCodeValid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificationCodeValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_SendVerifyCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendVerifyCode" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_SendVerifyCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendVerifyCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTecnomatixVersionCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTecnomatixVersionCode" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTecnomatixVersionCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTecnomatixVersionCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTecnomatixVersionCode2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTecnomatixVersionCode2" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTecnomatixVersionCode2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTecnomatixVersionCode2Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTecnomatixVersionCode3_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTecnomatixVersionCode3" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTecnomatixVersionCode3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTecnomatixVersionCode3Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTasksVersionCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTasksVersionCode" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTasksVersionCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTasksVersionCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTecnomatixVersionCodeExternal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTecnomatixVersionCodeExternal" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTecnomatixVersionCodeExternal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTecnomatixVersionCodeExternalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTecnomatixVersionCodeExternal3_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTecnomatixVersionCodeExternal3" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTTecnomatixVersionCodeExternal3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTTecnomatixVersionCodeExternal3Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateTx_Project_MCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTx_Project_MCM" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateTx_Project_MCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTx_Project_MCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateTx_Project_MCM_new_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTx_Project_MCM_new" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateTx_Project_MCM_new_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTx_Project_MCM_newResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_AddinProject_Model2DB_MCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddinProject_Model2DB_MCM" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_AddinProject_Model2DB_MCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddinProject_Model2DB_MCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_AddinProject_Model2DB_MCM_new_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddinProject_Model2DB_MCM_new" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_AddinProject_Model2DB_MCM_new_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddinProject_Model2DB_MCM_newResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateTx_Project_Model_Lib_MCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTx_Project_Model_Lib_MCM" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateTx_Project_Model_Lib_MCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTx_Project_Model_Lib_MCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Create_MCM_LibraryTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:Create_MCM_LibraryTable" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Create_MCM_LibraryTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Create_MCM_LibraryTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_BulkInsertMCMData_MCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:BulkInsertMCMData_MCM" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_BulkInsertMCMData_MCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BulkInsertMCMData_MCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_AddinTx_Project_Model_Lib_MCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddinTx_Project_Model_Lib_MCM" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_AddinTx_Project_Model_Lib_MCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddinTx_Project_Model_Lib_MCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_DeleteProject_1_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProject_1" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_DeleteProject_1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProject_1Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateTx_Project_Model_Users_MCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTx_Project_Model_Users_MCM" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateTx_Project_Model_Users_MCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTx_Project_Model_Users_MCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_AddinTx_Project_Model_Users_MCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddinTx_Project_Model_Users_MCM" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_AddinTx_Project_Model_Users_MCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddinTx_Project_Model_Users_MCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateAndBulkInsertUserMCMData_MCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAndBulkInsertUserMCMData_MCM" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CreateAndBulkInsertUserMCMData_MCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAndBulkInsertUserMCMData_MCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_EmptyTable_1_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmptyTable_1" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_EmptyTable_1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmptyTable_1Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_EmptyTable_new_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmptyTable_new" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_EmptyTable_new_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmptyTable_newResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetRowsCount_2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsCount_2" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetRowsCount_2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRowsCount_2Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_QueryJT_username_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJT_username" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_QueryJT_username_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryJT_usernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Tx_Refresh_MCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tx_Refresh_MCM" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Tx_Refresh_MCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Tx_Refresh_MCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Tx_Refresh_MCM_new1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tx_Refresh_MCM_new1" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Tx_Refresh_MCM_new1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Tx_Refresh_MCM_new1Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Query_ProjectModleExists_MCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query_ProjectModleExists_MCM" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Query_ProjectModleExists_MCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Query_ProjectModleExists_MCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Query_ProExists_uuid_MCM_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query_ProExists_uuid_MCM" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Query_ProExists_uuid_MCM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Query_ProExists_uuid_MCMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Query_AllPro4OpenID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query_AllPro4OpenID" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Query_AllPro4OpenID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Query_AllPro4OpenIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Query_UsersTakeProjectsOpenID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query_UsersTakeProjectsOpenID" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Query_UsersTakeProjectsOpenID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Query_UsersTakeProjectsOpenIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Query_UserNameByOpenID_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query_UserNameByOpenID" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Query_UserNameByOpenID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Query_UserNameByOpenIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Module_usage_statistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:Module_usage_statistics" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Module_usage_statistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Module_usage_statisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Module_usage_statistics_21_InputMessage">
+    <wsdl:part name="parameters" element="tns:Module_usage_statistics_21" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Module_usage_statistics_21_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Module_usage_statistics_21Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Module_usage_statistics2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Module_usage_statistics2" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Module_usage_statistics2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Module_usage_statistics2Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CalcWD_Rotation_4_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalcWD_Rotation_4" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CalcWD_Rotation_4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcWD_Rotation_4Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CalcWD_Rotation_5_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalcWD_Rotation_5" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CalcWD_Rotation_5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcWD_Rotation_5Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CalcVIA_Rotation_4_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalcVIA_Rotation_4" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CalcVIA_Rotation_4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcVIA_Rotation_4Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Calc_RPY2Matrix_Transform_InputMessage">
+    <wsdl:part name="parameters" element="tns:Calc_RPY2Matrix_Transform" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Calc_RPY2Matrix_Transform_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Calc_RPY2Matrix_TransformResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Calc_RPY2Matrix_Transform2_InputMessage">
+    <wsdl:part name="parameters" element="tns:Calc_RPY2Matrix_Transform2" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_Calc_RPY2Matrix_Transform2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Calc_RPY2Matrix_Transform2Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CalcNoteQuadrant_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalcNoteQuadrant" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CalcNoteQuadrant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcNoteQuadrantResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CalcRealBoxLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalcRealBoxLocation" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_CalcRealBoxLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalcRealBoxLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_MultiCalcRealBoxLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultiCalcRealBoxLocation" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_MultiCalcRealBoxLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiCalcRealBoxLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_ReCalcRotaFrme_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReCalcRotaFrme" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_ReCalcRotaFrme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReCalcRotaFrmeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTVersionCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTVersionCode" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTVersionCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTVersionCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTVersionCode2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTVersionCode2" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTVersionCode2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTVersionCode2Response" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTVersionCodeExternal3_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTVersionCodeExternal3" />
+  </wsdl:message>
+  <wsdl:message name="IAutoJTService_GetAutoJTVersionCodeExternal3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoJTVersionCodeExternal3Response" />
+  </wsdl:message>
+  <wsdl:portType name="IAutoJTService">
+    <wsdl:operation name="GetCPPRuntimeUrl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetCPPRuntimeUrl" message="tns:IAutoJTService_GetCPPRuntimeUrl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetCPPRuntimeUrlResponse" message="tns:IAutoJTService_GetCPPRuntimeUrl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnionIDNickName4ClientInfos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetUnionIDNickName4ClientInfos" message="tns:IAutoJTService_GetUnionIDNickName4ClientInfos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetUnionIDNickName4ClientInfosResponse" message="tns:IAutoJTService_GetUnionIDNickName4ClientInfos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAuthentication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/UserAuthentication" message="tns:IAutoJTService_UserAuthentication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/UserAuthenticationResponse" message="tns:IAutoJTService_UserAuthentication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeNickname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/UpgradeNickname" message="tns:IAutoJTService_UpgradeNickname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/UpgradeNicknameResponse" message="tns:IAutoJTService_UpgradeNickname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserPaymentData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/UpdateUserPaymentData" message="tns:IAutoJTService_UpdateUserPaymentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/UpdateUserPaymentDataResponse" message="tns:IAutoJTService_UpdateUserPaymentData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllComboMealInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/QueryAllComboMealInfo" message="tns:IAutoJTService_QueryAllComboMealInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/QueryAllComboMealInfoResponse" message="tns:IAutoJTService_QueryAllComboMealInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserOwnerVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CheckUserOwnerVersion" message="tns:IAutoJTService_CheckUserOwnerVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CheckUserOwnerVersionResponse" message="tns:IAutoJTService_CheckUserOwnerVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAllEnableVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetUserAllEnableVersion" message="tns:IAutoJTService_GetUserAllEnableVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetUserAllEnableVersionResponse" message="tns:IAutoJTService_GetUserAllEnableVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetData" message="tns:IAutoJTService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetDataResponse" message="tns:IAutoJTService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetDataUsingDataContract" message="tns:IAutoJTService_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetDataUsingDataContractResponse" message="tns:IAutoJTService_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentClientLoginStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetCurrentClientLoginStatus" message="tns:IAutoJTService_GetCurrentClientLoginStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetCurrentClientLoginStatusResponse" message="tns:IAutoJTService_GetCurrentClientLoginStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentMachineLoginCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetCurrentMachineLoginCode" message="tns:IAutoJTService_GetCurrentMachineLoginCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetCurrentMachineLoginCodeResponse" message="tns:IAutoJTService_GetCurrentMachineLoginCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginPopular">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetLoginPopular" message="tns:IAutoJTService_GetLoginPopular_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetLoginPopularResponse" message="tns:IAutoJTService_GetLoginPopular_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryVersionDesc4ModuleID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/QueryVersionDesc4ModuleID" message="tns:IAutoJTService_QueryVersionDesc4ModuleID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/QueryVersionDesc4ModuleIDResponse" message="tns:IAutoJTService_QueryVersionDesc4ModuleID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAuth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/ValidateAuth" message="tns:IAutoJTService_ValidateAuth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/ValidateAuthResponse" message="tns:IAutoJTService_ValidateAuth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExitLoginMethod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/ExitLoginMethod" message="tns:IAutoJTService_ExitLoginMethod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/ExitLoginMethodResponse" message="tns:IAutoJTService_ExitLoginMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTableFromDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetTableFromDatabase" message="tns:IAutoJTService_GetTableFromDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetTableFromDatabaseResponse" message="tns:IAutoJTService_GetTableFromDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFromDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetUserFromDatabase" message="tns:IAutoJTService_GetUserFromDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetUserFromDatabaseResponse" message="tns:IAutoJTService_GetUserFromDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFromDatabase2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetUserFromDatabase2" message="tns:IAutoJTService_GetUserFromDatabase2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetUserFromDatabase2Response" message="tns:IAutoJTService_GetUserFromDatabase2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFromDatabase_wechat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetUserFromDatabase_wechat" message="tns:IAutoJTService_GetUserFromDatabase_wechat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetUserFromDatabase_wechatResponse" message="tns:IAutoJTService_GetUserFromDatabase_wechat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFromDatabase_wechat2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetUserFromDatabase_wechat2" message="tns:IAutoJTService_GetUserFromDatabase_wechat2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetUserFromDatabase_wechat2Response" message="tns:IAutoJTService_GetUserFromDatabase_wechat2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItemData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/DeleteItemData" message="tns:IAutoJTService_DeleteItemData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/DeleteItemDataResponse" message="tns:IAutoJTService_DeleteItemData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItemData2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/DeleteItemData2" message="tns:IAutoJTService_DeleteItemData2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/DeleteItemData2Response" message="tns:IAutoJTService_DeleteItemData2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertByDataTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/InsertByDataTable" message="tns:IAutoJTService_InsertByDataTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/InsertByDataTableResponse" message="tns:IAutoJTService_InsertByDataTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportTableToDB1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/ImportTableToDB1" message="tns:IAutoJTService_ImportTableToDB1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/ImportTableToDB1Response" message="tns:IAutoJTService_ImportTableToDB1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportTableToDB2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/ImportTableToDB2" message="tns:IAutoJTService_ImportTableToDB2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/ImportTableToDB2Response" message="tns:IAutoJTService_ImportTableToDB2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSqlDataReader1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetSqlDataReader1" message="tns:IAutoJTService_GetSqlDataReader1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetSqlDataReader1Response" message="tns:IAutoJTService_GetSqlDataReader1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetRowsCount" message="tns:IAutoJTService_GetRowsCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetRowsCountResponse" message="tns:IAutoJTService_GetRowsCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUsernameFidle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/QueryUsernameFidle" message="tns:IAutoJTService_QueryUsernameFidle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/QueryUsernameFidleResponse" message="tns:IAutoJTService_QueryUsernameFidle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CreateAccount" message="tns:IAutoJTService_CreateAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CreateAccountResponse" message="tns:IAutoJTService_CreateAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWchatNiceName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/UpdateWchatNiceName" message="tns:IAutoJTService_UpdateWchatNiceName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/UpdateWchatNiceNameResponse" message="tns:IAutoJTService_UpdateWchatNiceName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWchatNiceName_2Net6">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/UpdateWchatNiceName_2Net6" message="tns:IAutoJTService_UpdateWchatNiceName_2Net6_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/UpdateWchatNiceName_2Net6Response" message="tns:IAutoJTService_UpdateWchatNiceName_2Net6_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificationCodeValid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/VerificationCodeValid" message="tns:IAutoJTService_VerificationCodeValid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/VerificationCodeValidResponse" message="tns:IAutoJTService_VerificationCodeValid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendVerifyCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/SendVerifyCode" message="tns:IAutoJTService_SendVerifyCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/SendVerifyCodeResponse" message="tns:IAutoJTService_SendVerifyCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTecnomatixVersionCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCode" message="tns:IAutoJTService_GetAutoJTTecnomatixVersionCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCodeResponse" message="tns:IAutoJTService_GetAutoJTTecnomatixVersionCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTecnomatixVersionCode2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCode2" message="tns:IAutoJTService_GetAutoJTTecnomatixVersionCode2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCode2Response" message="tns:IAutoJTService_GetAutoJTTecnomatixVersionCode2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTecnomatixVersionCode3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCode3" message="tns:IAutoJTService_GetAutoJTTecnomatixVersionCode3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCode3Response" message="tns:IAutoJTService_GetAutoJTTecnomatixVersionCode3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTasksVersionCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTasksVersionCode" message="tns:IAutoJTService_GetAutoJTTasksVersionCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTasksVersionCodeResponse" message="tns:IAutoJTService_GetAutoJTTasksVersionCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTecnomatixVersionCodeExternal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCodeExternal" message="tns:IAutoJTService_GetAutoJTTecnomatixVersionCodeExternal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCodeExternalResponse" message="tns:IAutoJTService_GetAutoJTTecnomatixVersionCodeExternal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTecnomatixVersionCodeExternal3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCodeExternal3" message="tns:IAutoJTService_GetAutoJTTecnomatixVersionCodeExternal3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCodeExternal3Response" message="tns:IAutoJTService_GetAutoJTTecnomatixVersionCodeExternal3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTx_Project_MCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CreateTx_Project_MCM" message="tns:IAutoJTService_CreateTx_Project_MCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CreateTx_Project_MCMResponse" message="tns:IAutoJTService_CreateTx_Project_MCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTx_Project_MCM_new">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CreateTx_Project_MCM_new" message="tns:IAutoJTService_CreateTx_Project_MCM_new_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CreateTx_Project_MCM_newResponse" message="tns:IAutoJTService_CreateTx_Project_MCM_new_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddinProject_Model2DB_MCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/AddinProject_Model2DB_MCM" message="tns:IAutoJTService_AddinProject_Model2DB_MCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/AddinProject_Model2DB_MCMResponse" message="tns:IAutoJTService_AddinProject_Model2DB_MCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddinProject_Model2DB_MCM_new">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/AddinProject_Model2DB_MCM_new" message="tns:IAutoJTService_AddinProject_Model2DB_MCM_new_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/AddinProject_Model2DB_MCM_newResponse" message="tns:IAutoJTService_AddinProject_Model2DB_MCM_new_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTx_Project_Model_Lib_MCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CreateTx_Project_Model_Lib_MCM" message="tns:IAutoJTService_CreateTx_Project_Model_Lib_MCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CreateTx_Project_Model_Lib_MCMResponse" message="tns:IAutoJTService_CreateTx_Project_Model_Lib_MCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Create_MCM_LibraryTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Create_MCM_LibraryTable" message="tns:IAutoJTService_Create_MCM_LibraryTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Create_MCM_LibraryTableResponse" message="tns:IAutoJTService_Create_MCM_LibraryTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BulkInsertMCMData_MCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/BulkInsertMCMData_MCM" message="tns:IAutoJTService_BulkInsertMCMData_MCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/BulkInsertMCMData_MCMResponse" message="tns:IAutoJTService_BulkInsertMCMData_MCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddinTx_Project_Model_Lib_MCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/AddinTx_Project_Model_Lib_MCM" message="tns:IAutoJTService_AddinTx_Project_Model_Lib_MCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/AddinTx_Project_Model_Lib_MCMResponse" message="tns:IAutoJTService_AddinTx_Project_Model_Lib_MCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProject_1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/DeleteProject_1" message="tns:IAutoJTService_DeleteProject_1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/DeleteProject_1Response" message="tns:IAutoJTService_DeleteProject_1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTx_Project_Model_Users_MCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CreateTx_Project_Model_Users_MCM" message="tns:IAutoJTService_CreateTx_Project_Model_Users_MCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CreateTx_Project_Model_Users_MCMResponse" message="tns:IAutoJTService_CreateTx_Project_Model_Users_MCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddinTx_Project_Model_Users_MCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/AddinTx_Project_Model_Users_MCM" message="tns:IAutoJTService_AddinTx_Project_Model_Users_MCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/AddinTx_Project_Model_Users_MCMResponse" message="tns:IAutoJTService_AddinTx_Project_Model_Users_MCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndBulkInsertUserMCMData_MCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CreateAndBulkInsertUserMCMData_MCM" message="tns:IAutoJTService_CreateAndBulkInsertUserMCMData_MCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CreateAndBulkInsertUserMCMData_MCMResponse" message="tns:IAutoJTService_CreateAndBulkInsertUserMCMData_MCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmptyTable_1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/EmptyTable_1" message="tns:IAutoJTService_EmptyTable_1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/EmptyTable_1Response" message="tns:IAutoJTService_EmptyTable_1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmptyTable_new">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/EmptyTable_new" message="tns:IAutoJTService_EmptyTable_new_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/EmptyTable_newResponse" message="tns:IAutoJTService_EmptyTable_new_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsCount_2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetRowsCount_2" message="tns:IAutoJTService_GetRowsCount_2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetRowsCount_2Response" message="tns:IAutoJTService_GetRowsCount_2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryJT_username">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/QueryJT_username" message="tns:IAutoJTService_QueryJT_username_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/QueryJT_usernameResponse" message="tns:IAutoJTService_QueryJT_username_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tx_Refresh_MCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Tx_Refresh_MCM" message="tns:IAutoJTService_Tx_Refresh_MCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Tx_Refresh_MCMResponse" message="tns:IAutoJTService_Tx_Refresh_MCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tx_Refresh_MCM_new1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Tx_Refresh_MCM_new1" message="tns:IAutoJTService_Tx_Refresh_MCM_new1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Tx_Refresh_MCM_new1Response" message="tns:IAutoJTService_Tx_Refresh_MCM_new1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query_ProjectModleExists_MCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Query_ProjectModleExists_MCM" message="tns:IAutoJTService_Query_ProjectModleExists_MCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Query_ProjectModleExists_MCMResponse" message="tns:IAutoJTService_Query_ProjectModleExists_MCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query_ProExists_uuid_MCM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Query_ProExists_uuid_MCM" message="tns:IAutoJTService_Query_ProExists_uuid_MCM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Query_ProExists_uuid_MCMResponse" message="tns:IAutoJTService_Query_ProExists_uuid_MCM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query_AllPro4OpenID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Query_AllPro4OpenID" message="tns:IAutoJTService_Query_AllPro4OpenID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Query_AllPro4OpenIDResponse" message="tns:IAutoJTService_Query_AllPro4OpenID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query_UsersTakeProjectsOpenID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Query_UsersTakeProjectsOpenID" message="tns:IAutoJTService_Query_UsersTakeProjectsOpenID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Query_UsersTakeProjectsOpenIDResponse" message="tns:IAutoJTService_Query_UsersTakeProjectsOpenID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query_UserNameByOpenID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Query_UserNameByOpenID" message="tns:IAutoJTService_Query_UserNameByOpenID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Query_UserNameByOpenIDResponse" message="tns:IAutoJTService_Query_UserNameByOpenID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Module_usage_statistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Module_usage_statistics" message="tns:IAutoJTService_Module_usage_statistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Module_usage_statisticsResponse" message="tns:IAutoJTService_Module_usage_statistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Module_usage_statistics_21">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Module_usage_statistics_21" message="tns:IAutoJTService_Module_usage_statistics_21_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Module_usage_statistics_21Response" message="tns:IAutoJTService_Module_usage_statistics_21_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Module_usage_statistics2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Module_usage_statistics2" message="tns:IAutoJTService_Module_usage_statistics2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Module_usage_statistics2Response" message="tns:IAutoJTService_Module_usage_statistics2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcWD_Rotation_4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CalcWD_Rotation_4" message="tns:IAutoJTService_CalcWD_Rotation_4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CalcWD_Rotation_4Response" message="tns:IAutoJTService_CalcWD_Rotation_4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcWD_Rotation_5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CalcWD_Rotation_5" message="tns:IAutoJTService_CalcWD_Rotation_5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CalcWD_Rotation_5Response" message="tns:IAutoJTService_CalcWD_Rotation_5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcVIA_Rotation_4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CalcVIA_Rotation_4" message="tns:IAutoJTService_CalcVIA_Rotation_4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CalcVIA_Rotation_4Response" message="tns:IAutoJTService_CalcVIA_Rotation_4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Calc_RPY2Matrix_Transform">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Calc_RPY2Matrix_Transform" message="tns:IAutoJTService_Calc_RPY2Matrix_Transform_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Calc_RPY2Matrix_TransformResponse" message="tns:IAutoJTService_Calc_RPY2Matrix_Transform_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Calc_RPY2Matrix_Transform2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/Calc_RPY2Matrix_Transform2" message="tns:IAutoJTService_Calc_RPY2Matrix_Transform2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/Calc_RPY2Matrix_Transform2Response" message="tns:IAutoJTService_Calc_RPY2Matrix_Transform2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcNoteQuadrant">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CalcNoteQuadrant" message="tns:IAutoJTService_CalcNoteQuadrant_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CalcNoteQuadrantResponse" message="tns:IAutoJTService_CalcNoteQuadrant_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcRealBoxLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/CalcRealBoxLocation" message="tns:IAutoJTService_CalcRealBoxLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/CalcRealBoxLocationResponse" message="tns:IAutoJTService_CalcRealBoxLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultiCalcRealBoxLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/MultiCalcRealBoxLocation" message="tns:IAutoJTService_MultiCalcRealBoxLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/MultiCalcRealBoxLocationResponse" message="tns:IAutoJTService_MultiCalcRealBoxLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReCalcRotaFrme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/ReCalcRotaFrme" message="tns:IAutoJTService_ReCalcRotaFrme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/ReCalcRotaFrmeResponse" message="tns:IAutoJTService_ReCalcRotaFrme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTVersionCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTVersionCode" message="tns:IAutoJTService_GetAutoJTVersionCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTVersionCodeResponse" message="tns:IAutoJTService_GetAutoJTVersionCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTVersionCode2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTVersionCode2" message="tns:IAutoJTService_GetAutoJTVersionCode2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTVersionCode2Response" message="tns:IAutoJTService_GetAutoJTVersionCode2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTVersionCodeExternal3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTVersionCodeExternal3" message="tns:IAutoJTService_GetAutoJTVersionCodeExternal3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAutoJTService/GetAutoJTVersionCodeExternal3Response" message="tns:IAutoJTService_GetAutoJTVersionCodeExternal3_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAutoJTService" type="tns:IAutoJTService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCPPRuntimeUrl">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetCPPRuntimeUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnionIDNickName4ClientInfos">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetUnionIDNickName4ClientInfos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAuthentication">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/UserAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeNickname">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/UpgradeNickname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserPaymentData">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/UpdateUserPaymentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryAllComboMealInfo">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/QueryAllComboMealInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUserOwnerVersion">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CheckUserOwnerVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAllEnableVersion">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetUserAllEnableVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentClientLoginStatus">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetCurrentClientLoginStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentMachineLoginCode">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetCurrentMachineLoginCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginPopular">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetLoginPopular" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryVersionDesc4ModuleID">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/QueryVersionDesc4ModuleID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAuth">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/ValidateAuth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExitLoginMethod">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/ExitLoginMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTableFromDatabase">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetTableFromDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFromDatabase">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetUserFromDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFromDatabase2">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetUserFromDatabase2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFromDatabase_wechat">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetUserFromDatabase_wechat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserFromDatabase_wechat2">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetUserFromDatabase_wechat2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItemData">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/DeleteItemData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItemData2">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/DeleteItemData2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertByDataTable">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/InsertByDataTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportTableToDB1">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/ImportTableToDB1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportTableToDB2">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/ImportTableToDB2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSqlDataReader1">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetSqlDataReader1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsCount">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetRowsCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUsernameFidle">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/QueryUsernameFidle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccount">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CreateAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWchatNiceName">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/UpdateWchatNiceName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWchatNiceName_2Net6">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/UpdateWchatNiceName_2Net6" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificationCodeValid">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/VerificationCodeValid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendVerifyCode">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/SendVerifyCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTecnomatixVersionCode">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTecnomatixVersionCode2">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCode2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTecnomatixVersionCode3">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCode3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTasksVersionCode">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetAutoJTTasksVersionCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTecnomatixVersionCodeExternal">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCodeExternal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTTecnomatixVersionCodeExternal3">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetAutoJTTecnomatixVersionCodeExternal3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTx_Project_MCM">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CreateTx_Project_MCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTx_Project_MCM_new">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CreateTx_Project_MCM_new" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddinProject_Model2DB_MCM">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/AddinProject_Model2DB_MCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddinProject_Model2DB_MCM_new">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/AddinProject_Model2DB_MCM_new" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTx_Project_Model_Lib_MCM">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CreateTx_Project_Model_Lib_MCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Create_MCM_LibraryTable">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Create_MCM_LibraryTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BulkInsertMCMData_MCM">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/BulkInsertMCMData_MCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddinTx_Project_Model_Lib_MCM">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/AddinTx_Project_Model_Lib_MCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProject_1">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/DeleteProject_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTx_Project_Model_Users_MCM">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CreateTx_Project_Model_Users_MCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddinTx_Project_Model_Users_MCM">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/AddinTx_Project_Model_Users_MCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndBulkInsertUserMCMData_MCM">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CreateAndBulkInsertUserMCMData_MCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmptyTable_1">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/EmptyTable_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmptyTable_new">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/EmptyTable_new" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRowsCount_2">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetRowsCount_2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryJT_username">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/QueryJT_username" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_Refresh_MCM">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Tx_Refresh_MCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tx_Refresh_MCM_new1">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Tx_Refresh_MCM_new1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query_ProjectModleExists_MCM">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Query_ProjectModleExists_MCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query_ProExists_uuid_MCM">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Query_ProExists_uuid_MCM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query_AllPro4OpenID">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Query_AllPro4OpenID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query_UsersTakeProjectsOpenID">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Query_UsersTakeProjectsOpenID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query_UserNameByOpenID">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Query_UserNameByOpenID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Module_usage_statistics">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Module_usage_statistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Module_usage_statistics_21">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Module_usage_statistics_21" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Module_usage_statistics2">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Module_usage_statistics2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcWD_Rotation_4">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CalcWD_Rotation_4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcWD_Rotation_5">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CalcWD_Rotation_5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcVIA_Rotation_4">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CalcVIA_Rotation_4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Calc_RPY2Matrix_Transform">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Calc_RPY2Matrix_Transform" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Calc_RPY2Matrix_Transform2">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/Calc_RPY2Matrix_Transform2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcNoteQuadrant">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CalcNoteQuadrant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcRealBoxLocation">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/CalcRealBoxLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultiCalcRealBoxLocation">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/MultiCalcRealBoxLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReCalcRotaFrme">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/ReCalcRotaFrme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTVersionCode">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetAutoJTVersionCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTVersionCode2">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetAutoJTVersionCode2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoJTVersionCodeExternal3">
+      <soap:operation soapAction="http://tempuri.org/IAutoJTService/GetAutoJTVersionCodeExternal3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AutoJTService">
+    <wsdl:port name="BasicHttpBinding_IAutoJTService" binding="tns:BasicHttpBinding_IAutoJTService">
+      <soap:address location="http://www.autojt.com:8002/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

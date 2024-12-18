@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9AD914EB-653C-483D-9DF4-024FD400B815}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AutoJTTXCoreUtilities</RootNamespace>
+    <AssemblyName>AutoJTTXCoreUtilities</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EXTERNAL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DnPlanningApplicationsInfra">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\DnPlanningApplicationsInfra.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EMPAPPBASELib">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\EMPAPPBASELib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EMPAPPCLIENTMANAGERLib">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\EMPAPPCLIENTMANAGERLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EMPAPPLICATIONLib">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\EMPAPPLICATIONLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EMPAPPSERVICESLib">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\EMPAPPSERVICESLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EMPCLIENTCOMMANDSLib">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\EMPCLIENTCOMMANDSLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EMPCORELib">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\EMPCORELib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EMPINTEGRATIONLib">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\EMPINTEGRATIONLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EMPMODELLib">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\EMPMODELLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EMPTYPELIBRARYLib">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\EMPTYPELIBRARYLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EMPTYPEMGMTLib">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\EMPTYPEMGMTLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EngineeringInternalExtension">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\EngineeringInternalExtension.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Implementation">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\Implementation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Office\root\Office16\ADDINS\PowerPivot Excel Add-in\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Tecnomatix.Engineering">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\Tecnomatix.Engineering.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tecnomatix.Engineering.Olp">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\Tecnomatix.Engineering.Olp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Tecnomatix.Engineering.Ui">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\Tecnomatix.Engineering.Ui.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="TxEuOlpUtil">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\TxEuOlpUtil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UiInternalControls">
+      <HintPath>..\..\..\..\..\..\Program Files\Tecnomatix_16.1\eMPower\UiInternalControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AJTApGenUtils.cs" />
+    <Compile Include="AJTBoundingBox.cs" />
+    <Compile Include="AJTCollisionQueryMgr.cs" />
+    <Compile Include="AJTCommand.cs" />
+    <Compile Include="AJTCommandEnabler.cs" />
+    <Compile Include="AJTeMSUtils\AJTDefineComponentType.cs" />
+    <Compile Include="AJTeMSUtils\AJTeMServer.cs" />
+    <Compile Include="AJTeMSUtils\AJTeMServerResourceHelper.cs" />
+    <Compile Include="AJTeMSUtils\AJTeMServerUtils.cs" />
+    <Compile Include="AJTeMSUtils\AJTFileComponentNode.cs" />
+    <Compile Include="AJTeMSUtils\AJTTxPlanningObjectUtilities.cs" />
+    <Compile Include="AJTeMSUtils\AJTTxTuneData.cs" />
+    <Compile Include="AJTeMSUtils\AJTTxTuneDataUtilitites.cs" />
+    <Compile Include="AJTeMSUtils\AJTUpgPrototypeData.cs" />
+    <Compile Include="AJTeMSUtils\eMSCommons.cs" />
+    <Compile Include="AJTeMSUtils\IAJTComponentNodeComposite.cs" />
+    <Compile Include="AJTeMSUtils\IAJTUpgComponentOwnerData.cs" />
+    <Compile Include="AJTLMLocationsApp.cs" />
+    <Compile Include="AJTManipulator\AJTDimMeasurementManipulator.cs" />
+    <Compile Include="AJTManipulator\AJTMlmManipulator.cs" />
+    <Compile Include="AJTManipulator\AJTMlmPreviwer.cs" />
+    <Compile Include="AJTManipulator\AJTMultiMlmManipulator.cs" />
+    <Compile Include="AJTManipulator\AJTMultiViaManipulator.cs" />
+    <Compile Include="AJTManipulator\AJTViaManipulator.cs" />
+    <Compile Include="AJTManipulator\AJTViaPreviwer.cs" />
+    <Compile Include="AJTPickValidator.cs" />
+    <Compile Include="AJTRegistryKeys.cs" />
+    <Compile Include="AJTRoboticCommand.cs" />
+    <Compile Include="AJTRobotJogCollisionLogic.cs" />
+    <Compile Include="AJTTxApplicationUtilities.cs" />
+    <Compile Include="AJTTxComponentUtilities.cs" />
+    <Compile Include="AJTTxDisconnected.cs" />
+    <Compile Include="AJTTxDocumentUtilities.cs" />
+    <Compile Include="AJTTxMessageHandling.cs" />
+    <Compile Include="AJTTxObjectListUtilities.cs" />
+    <Compile Include="AJTTxOperationHelper.cs" />
+    <Compile Include="AJTTxRobotUtilities.cs" />
+    <Compile Include="ChangesMonitorValue.cs" />
+    <Compile Include="ColorDialogExtension.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EncryptUtil.cs" />
+    <Compile Include="GlobalClass.cs" />
+    <Compile Include="LV_ITEM.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="POINT.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RECT.cs" />
+    <Compile Include="RobotMatrix\AdjustLocationParams.cs" />
+    <Compile Include="RobotMatrix\AJTApAutoApproachAngleLocationParameters.cs" />
+    <Compile Include="RobotMatrix\AJTApFollowModeController.cs" />
+    <Compile Include="RobotMatrix\AJTApRmxLocationRobotServices.cs" />
+    <Compile Include="RobotMatrix\AJTApRmxUtils.cs" />
+    <Compile Include="RobotMatrix\AJTAutoApproachAngleApp.cs" />
+    <Compile Include="RobotMatrix\AJTAutoSyncSelectionManagerApp.cs" />
+    <Compile Include="RobotMatrix\AutoApproachAngle.cs" />
+    <Compile Include="RootTxAppearanceOperation.cs" />
+    <Compile Include="SetWindowPosFlags.cs" />
+    <Compile Include="SetWorkingFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetWorkingFrameWindow.xaml.cs">
+      <DependentUpon>SetWorkingFrameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StreamEx.cs" />
+    <Compile Include="TecnomatixInfos.cs" />
+    <Compile Include="UndoOperation.cs" />
+    <Compile Include="WINDOWINFO.cs" />
+    <Compile Include="XmlDocumentConvertor.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetWorkingFrame.resx">
+      <DependentUpon>SetWorkingFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoJTMathUtilities\AutoJTMathUtilities.csproj">
+      <Project>{116fa33e-82ec-4061-9d4f-06d8e0657b93}</Project>
+      <Name>AutoJTMathUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AutoJTTXUtilities\AutoJTTXUtilities.csproj">
+      <Project>{0df113f6-3d0a-4e6c-8bc0-8f9d280487ff}</Project>
+      <Name>AutoJTTXUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="SetWorkingFrameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

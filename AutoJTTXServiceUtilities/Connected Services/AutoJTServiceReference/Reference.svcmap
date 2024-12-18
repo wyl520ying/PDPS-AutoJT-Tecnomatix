@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="14b74fa5-972e-4099-aa5b-fa56f9b02612" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.autojt.com:8002/AutoJTService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AutoJTService.xsd" MetadataType="Schema" ID="7b25ae05-3ffc-46bc-9b97-8bef1568144f" SourceId="1" SourceUrl="http://www.autojt.com:8002/AutoJTService?xsd=xsd2" />
+    <MetadataFile FileName="AutoJTService1.xsd" MetadataType="Schema" ID="a7cf5c64-4212-477b-9da7-1581a411810d" SourceId="1" SourceUrl="http://www.autojt.com:8002/AutoJTService?xsd=xsd5" />
+    <MetadataFile FileName="AutoJTService2.xsd" MetadataType="Schema" ID="9dbdb902-5ca0-4cc9-b262-36b3f62dbc1f" SourceId="1" SourceUrl="http://www.autojt.com:8002/AutoJTService?xsd=xsd4" />
+    <MetadataFile FileName="AutoJTService.wsdl" MetadataType="Wsdl" ID="c6e3e84b-a026-400e-816f-82a893155dd7" SourceId="1" SourceUrl="http://www.autojt.com:8002/AutoJTService" />
+    <MetadataFile FileName="AutoJTService3.xsd" MetadataType="Schema" ID="1f49abed-5568-4942-8537-500d520dc9b2" SourceId="1" SourceUrl="http://www.autojt.com:8002/AutoJTService?xsd=xsd1" />
+    <MetadataFile FileName="AutoJTService4.xsd" MetadataType="Schema" ID="54034e54-8316-4465-b0ba-3ab7e029616f" SourceId="1" SourceUrl="http://www.autojt.com:8002/AutoJTService?xsd=xsd0" />
+    <MetadataFile FileName="AutoJTService5.xsd" MetadataType="Schema" ID="81d12c67-44e3-4e8d-8db8-88f4c9d78188" SourceId="1" SourceUrl="http://www.autojt.com:8002/AutoJTService?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="AutoJTLicensingTool.Views.PaymentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoJTLicensingTool.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" Background="White"
+        Title="{Binding TitleName,StringFormat=订阅管理 - {0}}" Height="800" Width="1145" MinHeight="800" MinWidth="1145" 
+        Icon="/AutoJTLicensingTool;component/Resources/TecnomatixLogoLarge.png" 
+        ShowInTaskbar="False">
+    <Grid>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"  Padding="30">
+        </Frame>
+    </Grid>
+</Window>

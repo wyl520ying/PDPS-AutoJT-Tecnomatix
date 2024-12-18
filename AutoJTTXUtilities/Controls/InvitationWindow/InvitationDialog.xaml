@@ -1,0 +1,57 @@
+﻿<src:TxWindow x:Class="AutoJTTXUtilities.Controls.InvitationWindow.InvitationDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoJTTXUtilities.Controls.InvitationWindow"
+        mc:Ignorable="d"
+        
+        xmlns:src="clr-namespace:Tecnomatix.Engineering.Ui.WPF;assembly=Tecnomatix.Engineering.Ui" 
+
+        Loaded="Window_Loaded" Closed="Window_Closed" KeyDown="TxWindow_KeyDown"
+              
+        Window.Title="" Height="400" Width="420" 
+        Window.Icon="/AutoJTTXUtilities;component/Controls/Resources/TecnomatixLogoLarge.png"  
+        Window.ResizeMode="CanResize"
+        FrameworkElement.MinHeight="400"        
+        FrameworkElement.MinWidth="420"        
+              
+        src:TxWindow.MinimizeBox="False"
+	    src:TxWindow.MaximizeBox="False"
+	    src:TxWindow.SemiModal="False"
+        src:ShouldAutoPosition="False"
+        Window.ShowInTaskbar="True"
+        WindowStartupLocation="CenterOwner"      
+	    src:TxWindow.ShouldCloseOnDocumentUnloading="True" WindowStyle="ToolWindow">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="12"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="1" Grid.Column="1" Margin="25,20,25,20" LastChildFill="True">
+            <TextBlock DockPanel.Dock="Top" FontFamily="微软雅黑" FontWeight="Bold" HorizontalAlignment="Center" FontSize="16" Margin="0,0,0,10">邀请新用户获得免费使用专业版</TextBlock>
+
+            <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Center" FontFamily="微软雅黑" FontWeight="Bold" Foreground="Blue" FontSize="16" Text="{Binding InvitationCode}" Margin="0,5,0,0"></TextBlock>
+            <TextBlock DockPanel.Dock="Bottom" HorizontalAlignment="Center" FontFamily="微软雅黑"  FontSize="14" >我的邀请码</TextBlock>
+            
+            <RichTextBox Name="richTextBox" BorderThickness="0" Background="Transparent" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" IsReadOnly="True">
+            </RichTextBox>
+        </DockPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="accept_btn" Click="accept_btn_Click" IsEnabled="{Binding Path=IsChecked, ElementName=userAcceptCheckBox}" FontSize="14" IsDefault="True" Height="32" Width="120" Margin="0,0,5,0">
+                复制
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</src:TxWindow>

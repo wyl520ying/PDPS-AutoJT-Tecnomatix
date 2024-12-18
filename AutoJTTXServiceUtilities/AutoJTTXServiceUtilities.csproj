@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8228CC26-2407-44CF-A1E1-CD73F151EDD0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoJTTXServiceUtilities</RootNamespace>
+    <AssemblyName>AutoJTTXServiceUtilities</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;INTERNAL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EXTERNAL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;INTERNAL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AutoJTLicensingTool\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AJTDatabaseOperation.cs" />
+    <Compile Include="Connected Services\AutoJTServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="PluginInfoStatistics.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\WeldLocCheckerRequest.cs" />
+    <Compile Include="Request\WeldLocCheckerRequest2.cs" />
+    <Compile Include="Response\WeldLocCheckerResponse.cs" />
+    <Compile Include="Result\WeldLocCheckerResult.cs" />
+    <Compile Include="Structure\DoubleArrayPair.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTService.wsdl" />
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.AddinProject_Model2DB_MCMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.AddinProject_Model2DB_MCM_newResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.AddinTx_Project_Model_Lib_MCMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.AddinTx_Project_Model_Users_MCMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.BulkInsertMCMData_MCMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CalcNoteQuadrantResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CalcRealBoxLocationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CalcVIA_Rotation_4Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CalcWD_Rotation_4Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CalcWD_Rotation_5Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.Calc_RPY2Matrix_Transform2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.Calc_RPY2Matrix_TransformResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CheckUserOwnerVersionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CreateAndBulkInsertUserMCMData_MCMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CreateTx_Project_MCMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CreateTx_Project_MCM_newResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CreateTx_Project_Model_Lib_MCMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.CreateTx_Project_Model_Users_MCMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.Create_MCM_LibraryTableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.DeleteProject_1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetAutoJTTasksVersionCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetAutoJTTecnomatixVersionCode2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetAutoJTTecnomatixVersionCode3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetAutoJTTecnomatixVersionCodeExternal3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetAutoJTTecnomatixVersionCodeExternalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetAutoJTTecnomatixVersionCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetAutoJTVersionCode2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetAutoJTVersionCodeExternal3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetAutoJTVersionCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetCurrentMachineLoginCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetUnionIDNickName4ClientInfosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetUserFromDatabase2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.GetUserFromDatabaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.ImportTableToDB1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.ImportTableToDB2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.MultiCalcRealBoxLocationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.QueryAllComboMealInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.Query_AllPro4OpenIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.Query_ProExists_uuid_MCMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.Query_UserNameByOpenIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.Query_UsersTakeProjectsOpenIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.Tx_Refresh_MCMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.Tx_Refresh_MCM_new1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.UpdateUserPaymentDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.UpdateWchatNiceNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.UpdateWchatNiceName_2Net6Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\AutoJTServiceReference\AutoJTTXServiceUtilities.AutoJTServiceReference.UserAuthenticationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AutoJTServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AutoJTServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AutoJTServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\AutoJTServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoJTL.SDK.Strandard\AutoJTL.SDK.Strandard.csproj">
+      <Project>{4d1619c5-0ccd-42d9-bb3b-db10a0ee3579}</Project>
+      <Name>AutoJTL.SDK.Strandard</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

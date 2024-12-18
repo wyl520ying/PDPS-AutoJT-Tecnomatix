@@ -1,0 +1,53 @@
+﻿<local:AJTProgressWindowBase x:Class="AutoJTTXUtilities.Controls.AJTProgressWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:AutoJTTXUtilities.Controls"        
+                               
+        Control.Background="{StaticResource {x:Static SystemColors.ControlBrushKey}}"
+        mc:Ignorable="d" 
+        Window.Title="正在运行..." Height="120" Width="320" 
+        Window.ResizeMode="CanResize"
+        FrameworkElement.MinHeight="120"
+        FrameworkElement.MinWidth="320"	 
+        FrameworkElement.MaxHeight="120"
+        FrameworkElement.MaxWidth="320"	 
+        
+        WindowStyle="ToolWindow"
+        
+        Window.ShowInTaskbar="False"
+        WindowStartupLocation="CenterOwner">
+
+    <FrameworkElement.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+					Source="/Tecnomatix.Engineering.Ui;component/WPF/Resources/TxBaseResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </FrameworkElement.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="8"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions >
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Grid.Column="1">
+            <ProgressBar Value="0" Margin="15,0,15,0" Height="22" x:Name="ProgressBar_Progress" />
+        </DockPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Button Margin="0,0,15,0" Height="23" Width="75" x:Name="Button_Cancel" Content="取消" Click="Button_Cancel_Click"/>
+        </StackPanel>
+
+    </Grid>
+</local:AJTProgressWindowBase>

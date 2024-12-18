@@ -1,0 +1,59 @@
+﻿<Window x:Class="AutoJTTXCoreUtilities.SetWorkingFrameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:src="clr-namespace:Tecnomatix.Engineering.Ui.WPF;assembly=Tecnomatix.Engineering.Ui" 
+        xmlns:wfi ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        xmlns:src2="clr-namespace:Tecnomatix.Engineering.Ui;assembly=Tecnomatix.Engineering.Ui" 
+        
+        xmlns:local="clr-namespace:AutoJTTXCoreUtilities"
+        
+        Control.Background="{StaticResource {x:Static SystemColors.ControlBrushKey}}"
+        mc:Ignorable="d" Loaded="Window_Loaded" Closed="Window_Closed"
+        Window.ResizeMode="CanResize" 
+        WindowStyle="ToolWindow"        
+        Window.ShowInTaskbar="False"
+        WindowStartupLocation="CenterOwner"        
+        Height="125" Width="250"  MinHeight="125" MinWidth="250" MaxHeight="125" MaxWidth="250">
+
+    <FrameworkElement.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+					Source="/Tecnomatix.Engineering.Ui;component/WPF/Resources/TxBaseResourceDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </FrameworkElement.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="8"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions >
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <DockPanel Height="22" Grid.Row="0" Grid.Column="1" Margin="0,8,0,0">
+            <wfi:WindowsFormsHost >
+                <src2:TxFrameEditBoxCtrl x:Name = "txFrameEditBoxCtrl1" TabIndex="7" ValidFrameSet="txFrameEditBoxCtrl1_ValidFrameSet"
+                                                     EnableRelativeToWorkingFrameCoordinates ="False"
+                                                     ListenToPick ="True"
+                                                     PickLevel ="Entity"                                                     
+                                                     ValidatorType ="AnyLocatableObject"
+                                                     VisualizePickedFrameInGraphicViewer ="True" 
+                                                     Height="22" />
+            </wfi:WindowsFormsHost>
+        </DockPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Height="22" HorizontalAlignment="Right">
+            <Button Width="75" Margin="0,0,10,0" x:Name="cUiContinuousButton_ok" Click="cUiContinuousButton_ok_Click" IsDefault="True">OK</Button>
+            <Button Width="75" x:Name="cUiContinuousButton_cancel" Click="cUiContinuousButton_cancel_Click">Cancel</Button>
+        </StackPanel>
+    </Grid>
+</Window>

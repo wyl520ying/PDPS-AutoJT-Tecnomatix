@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoJTTXUtilities", "AutoJTTXUtilities.csproj", "{0DF113F6-3D0A-4E6C-8BC0-8F9D280487FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoJTMathUtilities", "..\AutoJTMathUtilities\AutoJTMathUtilities.csproj", "{116FA33E-82EC-4061-9D4F-06D8E0657B93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DF113F6-3D0A-4E6C-8BC0-8F9D280487FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF113F6-3D0A-4E6C-8BC0-8F9D280487FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF113F6-3D0A-4E6C-8BC0-8F9D280487FF}.Debug|x64.ActiveCfg = Debug|x64
+		{0DF113F6-3D0A-4E6C-8BC0-8F9D280487FF}.Debug|x64.Build.0 = Debug|x64
+		{0DF113F6-3D0A-4E6C-8BC0-8F9D280487FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF113F6-3D0A-4E6C-8BC0-8F9D280487FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DF113F6-3D0A-4E6C-8BC0-8F9D280487FF}.Release|x64.ActiveCfg = Release|x64
+		{0DF113F6-3D0A-4E6C-8BC0-8F9D280487FF}.Release|x64.Build.0 = Release|x64
+		{116FA33E-82EC-4061-9D4F-06D8E0657B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116FA33E-82EC-4061-9D4F-06D8E0657B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116FA33E-82EC-4061-9D4F-06D8E0657B93}.Debug|x64.ActiveCfg = Debug|x64
+		{116FA33E-82EC-4061-9D4F-06D8E0657B93}.Debug|x64.Build.0 = Debug|x64
+		{116FA33E-82EC-4061-9D4F-06D8E0657B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116FA33E-82EC-4061-9D4F-06D8E0657B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116FA33E-82EC-4061-9D4F-06D8E0657B93}.Release|x64.ActiveCfg = Release|x64
+		{116FA33E-82EC-4061-9D4F-06D8E0657B93}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0086D35-60BF-44BA-A938-B1062ECF9E4C}
+	EndGlobalSection
+EndGlobal
